@@ -86,6 +86,40 @@ variable "ip_address_list" {
 Если заполнить default некорректными значениями , при вызове terraform console выдает ошибки:   
 ![image](https://github.com/suntsovvv/ter-homeworks-05/assets/154943765/063060bc-c636-482d-a1d2-2d1410834c85)   
 
+### Задание 5*   
+Написал переменные:
+```
+variable "string_check" {
+  type        = string
+  description = "any string"
+  default     = "Test-string"
 
+  validation {
+      condition = var.string_check == lower(var.string_check)
+      error_message = "The string must not contain uppercase characters"
+  }
+}
+
+
+variable "in_the_end_there_can_be_only_one" {
+    description="Who is better Connor or Duncan?"
+    type = object({
+        Dunkan = optional(bool)
+        Connor = optional(bool)
+    })
+
+    default = {
+        Dunkan = false
+        Connor = false
+    }
+
+    validation {
+        error_message = "There can be only one MacLeod"
+        condition = var.in_the_end_there_can_be_only_one.Dunkan !=  var.in_the_end_there_can_be_only_one.Connor
+    }
+}
+```
+Если заполнить default некорректными значениями , при вызове terraform console выдает ошибки:   
+![image](https://github.com/suntsovvv/ter-homeworks-05/assets/154943765/97e582a9-9a43-405c-9c76-08a60741ffe9)
 
 
