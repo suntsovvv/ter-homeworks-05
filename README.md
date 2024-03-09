@@ -53,7 +53,13 @@ provider "yandex" {
 ![image](https://github.com/suntsovvv/ter-homeworks-05/assets/154943765/0701a32a-be1b-4b90-be17-c022e515117d)   
 
 В одном терминале открыл terraform console, во втором выполнил terrafotm apply:
-![image](https://github.com/suntsovvv/ter-homeworks-05/assets/154943765/81711abf-2443-4640-83d5-2667cfb83f89)
+![image](https://github.com/suntsovvv/ter-homeworks-05/assets/154943765/81711abf-2443-4640-83d5-2667cfb83f89)   
+
+### Задание 3   
+Выполнил проверки и исправил ошибки.
+Ссылка на pull request :  https://github.com/suntsovvv/ter-homeworks-05/pull/1   
+
+### Задание 4   
 
 
 
