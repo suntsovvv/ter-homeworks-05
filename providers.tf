@@ -1,11 +1,19 @@
 terraform {
+  required_version = ">= 0.13"
+}
+terraform {
   required_providers {
     yandex = {
       source = "yandex-cloud/yandex"
+      version = ">=0.13"
     }
+    template = { 
+      source =  "hashicorp/template"
+      version = ">= 2.1"}
   }
-  required_version = ">=1.5"
+ # required_version = ">=0.13"
 }
+
 terraform {
 backend "s3" {
 endpoint = "storage.yandexcloud.net"
